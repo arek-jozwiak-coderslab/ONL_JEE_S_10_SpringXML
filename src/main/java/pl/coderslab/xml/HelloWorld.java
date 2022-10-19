@@ -1,7 +1,11 @@
-package pl.coderslab;
+package pl.coderslab.xml;
 
 public class HelloWorld {
     private String message;
+
+    public HelloWorld() {
+        System.out.println("sddddddddddddddddddddddd");
+    }
 
     public HelloWorld(String message) {
         System.out.println("create hello world");
@@ -13,6 +17,7 @@ public class HelloWorld {
     }
 
     public void setMessage(String message) {
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaa");
         this.message = message;
     }
 

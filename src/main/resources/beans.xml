@@ -2,8 +2,20 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="helloWorld1" class="pl.coderslab.xml.HelloWorld"/>
 
-    <bean id="helloWorld" class="pl.coderslab.HelloWorld" >
+    <bean id="helloWorld2" class="pl.coderslab.xml.HelloWorld">
         <constructor-arg name="message" value="Witaj Spring"/>
+        <property name="message" value="Witaj Spring - by setter"/>
+    </bean>
+    <!--    <bean id="helloWorld" class="pl.coderslab.HelloWorld" >-->
+    <!--         <property name="message" value="Witaj Spring - by setter"/>-->
+    <!--    </bean>-->
+
+    <bean id="emailService" class="pl.coderslab.xml.EmailService"/>
+
+    <bean id="messageSender" class="pl.coderslab.xml.MessageSender">
+        <constructor-arg ref="emailService"/>
+        <property name="message" value="Message from xml"/>
     </bean>
 </beans>
